@@ -22,7 +22,7 @@ a {
     color: inherit;
 
     &:focus-visible {
-        outline: 2px dashed $red-bright;
+        outline: 2px dashed;
         outline-offset: 2px;
     }
 }
