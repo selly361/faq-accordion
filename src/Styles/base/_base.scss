@@ -5,13 +5,29 @@
 body {
     width: 100vw;
     height: 100vh;
-    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightPink;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 30vh;
+        background: url('../../../public/images/background-pattern-desktop.svg') no-repeat;
+        z-index: -1;
+    }
 }
 
 
 
-@include breakpoint(lg) {
-    body {
-        
+@include breakpoint(sm) {
+    body::before {
+        background: url('../../../public/images/background-pattern-mobile.svg') no-repeat / cover;
     }
 }
